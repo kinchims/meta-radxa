@@ -1,0 +1,13 @@
+[Unit]
+Description=Enable Bluetooth
+After=bluetooth.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/scripts
+ExecStart=/scripts/enablebluetooth.sh
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
